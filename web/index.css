@@ -1,0 +1,228 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('./font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('./font/iconfont.woff2') format('woff2'),
+      url('./font/iconfont.woff') format('woff'),
+      url('./font/iconfont.ttf') format('truetype'),
+      url('./font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*头部信息*/
+.nav {
+	margin: 0 auto;
+	width: 990px;
+	height: 35px;
+	background: #f5f5f5;
+}
+#headMessage li {
+	float: left;
+	line-height: 35px;
+	padding: 0 6px;
+	font-size: 0; /*空格由字体大小决定,设置父级字体大小为0,可以取消空格*/
+}
+#headMessage a {
+	color: #6c6c6c;
+	font-size: 12px; /*把字体回到12,不然字体也为0显示不出来*/
+}
+#headMessage a.login {
+	color: #f22e00;
+}
+#headMessage span {
+	font-size: 12px;
+}
+#headMessage span.arrow {
+	margin-left: 7px;
+}
+#headMessage li strong {
+	font-size: 12px;
+	color: #f40;
+}
+#headMessage li a:hover {
+	color: #f40;
+}
+#headMessage li.line {
+	font-size: 12px;
+	color: #ddd;
+	padding: 0 5px;
+}
+
+/*头部广告*/
+#headAd {
+	background-color: #f12f04;
+}
+#headAd .go {
+	display: block;
+	padding: 10px 10px 10px 15px;
+}
+#headAd .go img {
+	width: 120px;
+	height: 80px;
+}
+#headAd ul {
+	padding-top: 13px;
+}
+#headAd li {
+	float: left;
+	width: 209px;
+	height: 75px;
+	margin-right: 10px;
+	padding: 12px 15px 0 15px;
+	box-sizing: border-box; /*IE盒模型:总宽度=width;总高度=height*/
+}
+#headAd li h3 {
+	font-size: 20px;
+	line-height: 28px;
+}
+#headAd li a {
+	color: #fff;
+	display: block; /*变成块级元素*/
+}
+#headAd li a img{
+	width: 52px;
+	height: 52px;
+	border-radius: 5px;
+}
+#headAd li.item1 {
+	background-color: purple;
+	border-radius: 5px;
+}
+#headAd li.item2 {
+	background-color: green;
+	border-radius: 5px;
+}
+#headAd li.item3 {
+	background-color: blue;
+	border-radius: 5px;
+}
+#headAd li.item4 {
+	background-color: #333;
+	border-radius: 5px;
+	margin-right: 0;
+}
+
+/*头部搜索*/
+#headSearch {
+	background-color: #fff;
+	padding: 24px 0 10px 0;
+}
+#headSearch h1 a {
+	display: block;
+	width: 190px;
+	height: 58px;
+	/*以图换字*/
+	background: url(./images/taobao.png);
+	background-size: 190px;
+	text-indent: -9999px; /*首行缩进负值往左走,由于值很大所以不会出现在界面*/
+	overflow: hidden;
+	margin-top: 8px;
+}
+#headSearch .code {
+	width: 72px;
+	height: 86px;
+	bottom: 1px solid #eee;
+	position: relative;
+	margin-right: 110px;
+	text-align: center;
+}
+#headSearch a img {
+	width: 123px;
+	height: 72px;
+}
+#headSearch .search {
+	width: 630px;
+	margin: 0 auto; /*居中*/
+}
+#headSearch .searchTab {
+	height: 22px; /*有浮动的情况下最好设置一个高度，不然会跟着跑*/
+	padding-left: 17px;
+}
+#headSearch .searchTab li {
+	float: left;
+	width: 36px;
+	line-height: 22px;
+	margin-right: 4px;
+	text-align: center;
+	color: #f40;
+	cursor: pointer;
+}
+#headSearch .searchTab li:hover {
+	background-color: #ffeee5;
+}
+#headSearch .searchTab li.active {
+	color: #fff;
+	font-weight: bold;
+	background-image: linear-gradient(to right, #ff9000, #ff5000); /*线性渐变*/
+	border-radius: 6px 6px 0 0;
+}
+#headSearch .searchContent {
+	height: 40px;
+}
+#headSearch .searchbox {
+	width: 554px;
+	height: 40px;
+	box-sizing: border-box;
+	border: 2px solid #ff5000;
+	border-right: none;
+	border-radius: 20px 0 0 20px;
+	overflow: hidden;
+	position: relative; /*父级相对定位*/
+}
+#headSearch .searchbox input {
+	width: 490px; /*留出一块图标的位置*/
+	height: 36px; /*content=40-4*/
+	line-height: 36px;
+	outline: none;
+	border: none;
+	text-indent: 10px; /*输入的文字的缩进*/
+
+	/*后面的placeholder的文字覆盖了input*/
+	position: absolute; /*与placeholder同级别*/
+	z-index: 1;
+	background-color: transparent; /*为了能看到后面的文字，设置透明，但导致了了本来在右边的搜索图标往左（定位脱离文档流）*/
+}
+#headSearch .searchbox .placeholder {
+	position: absolute;
+	top: 9px;
+	left: 14px;
+}
+#headSearch .placeholder span {
+	color: #9c9c9c;
+}
+#headSearch .searchbox img {
+	width: 30px;
+	height: 30px;
+	/*vertical-align: middle;*/
+	position: absolute;
+	right: 20px;
+	top: 3px;
+	cursor: pointer;
+}
+#headSearch button {
+	width: 74px;
+	height: 40px;
+	text-align: center;
+	font-size:  18px;
+	line-height: 40px;
+	vertical-align: middle;
+	color: #fff;
+	border: none;
+	background-image: linear-gradient(to right, #ff9000, #ff5000);
+	border-radius: 0 20px 20px 0;
+	cursor: pointer;
+}
+#headSearch .hotkey {
+	height: 25px;
+	line-height: 25px;
+	margin-left: 7px;
+}
+#headSearch .hotkey a:hover {
+	color: #f50;
+}
