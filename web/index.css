@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'iconfont';
-  src: url('../font/iconfont.eot');
+  src: url('./font/iconfont.eot');
   src: url('./font/iconfont.eot?#iefix') format('embedded-opentype'),
       url('./font/iconfont.woff2') format('woff2'),
       url('./font/iconfont.woff') format('woff'),
@@ -263,6 +263,7 @@
 }
 #nav ul li.line {
 	margin: 0;
+	padding: 0;
 }
 /*#nav ul a:hover:before {
 	content: '',
@@ -274,3 +275,220 @@
 	left: 50%;
 	margin-left: -12px;
 }*/
+
+/*主体信息*/
+/*左边的内容*/
+/*侧边导航*/
+.firstLeft {
+	width: 890px;
+}
+.firstLeft .sideNav {
+	width: 190px;
+	height: 522px;
+	background: #fff;
+	border: 1px solid #ff5000;
+	box-sizing: border-box;
+	border-top: none;
+	padding-top: 5px;
+}
+.sideNav li {
+	height: 32px;
+	line-height: 32px;
+	padding-left: 25px;
+	transition: background-color 0.3s; /*css3:过渡*/
+	color: #999;
+}
+.sideNav li a {
+	font-size: 14px;
+}
+.sideNav li span {
+	font-size: 12px;
+	margin-right: 5px;
+}
+.sideNav li:hover {
+	background: #ffe4dc;
+	color: #f50;
+}
+.sideNav li:hover a {
+	color: #f50;
+}
+.sideNav li:hover a:hover {
+	text-decoration: underline;
+	
+}
+
+/*图片1容器*/
+.firstLeft .img1Box {
+	width: 690px;
+	height: 282px;
+	margin-top: 10px;
+}
+/*.firstLeft .img {
+	width: 650px;
+	height: 62px;
+}*/
+/*图片上的小样式*/
+.firstLeft .pic {
+	position: relative;
+	width: 520px;
+}
+.firstLeft .pic button {
+	width: 20px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	background-color: rgba(0,0,0,0.3);
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	display: none;
+}
+.firstLeft .pic button.leftbtn {
+	left: 0;
+	border-radius: 0 15px 15px 0;
+}
+.firstLeft .pic button.rightbtn {
+	right: 0;
+	border-radius: 15px 0 0 15px;
+}
+.firstLeft .pic:hover button {
+	display: block;
+}
+.firstLeft .pic .circle {
+	position: absolute;
+	bottom: -175px;
+	left: 42%;
+	margin-left: -33px;
+	background-color: rgba(255,255,255,0.3); /*IE9+支持*/
+	border-radius: 10px;
+	/*padding-top: 3px 0;*/
+	font-size: 0;
+}
+.firstLeft .pic .circle span  {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 0 3px;
+	cursor: pointer;
+}
+.firstLeft .pic .circle span.acive  {
+	background-color: #ff5000;
+}
+.firstLeft .ad {
+	width: 160px;
+}
+.firstLeft .ad img{
+	width: 160px;
+}
+
+/*图片2容器*/
+.firstLeft .img2Box {
+	width: 690px;
+	height: 220px;
+	margin-top: 10px;
+}
+.firstLeft .img2Box .picTitle {
+	height: 20px;
+}
+.firstLeft .img2Box .picTitle .text {
+	height: 17px;
+	line-height: 17px;
+}
+.firstLeft .img2Box .picTitle .line {
+	height: 3px;
+	background-color: #ff1648;
+	position: relative;
+}
+.firstLeft .img2Box .picTitle .line span {
+	position: absolute;
+	left: 0;
+	width: 87px;
+	height: 3px;
+	background-color: #000;
+}
+.firstLeft .img2Box .img {
+	height: 200px;
+	width: 520px;
+	background-color: #fff;
+	position: relative;
+	
+	display: table-cell;/*单元格特性：垂直居中*/
+	vertical-align: middle;
+	
+	display: flex; /*弹性盒模型,IE10+支持*/
+	justify-content: space-around; /*左右间距均分*/
+	align-items: center; /*上下间距均分*/
+}
+.firstLeft .img2Box .ad title {
+	height: 20px;
+	line-height: 20px;
+}
+/*淘宝头条*/
+.firstLeft .news {
+	width: 890px;
+	height: 100px;
+	background: #fff;
+	margin-top: 10px;
+	box-sizing: border-box;
+	padding: 13px 13px 13px 20px;
+}
+.firstLeft .news .hd h3 {
+	width: 129px;
+	height: 56px;
+	background: url(./images/taobao.png) no-repeat;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.firstLeft .news .hd p {
+	color: #999;
+	line-height: 24px;
+}
+.firstLeft .news .newList {
+	width: 680px;
+	position: relative;
+}
+.firstLeft .news .newList .img {
+	margin-right: 15px;
+}
+.firstLeft .news .newList .img img {
+	width: 130px;
+	height: 73px;
+}
+.firstLeft .news .newList h4 {
+	line-height: 28px;
+	font-size: 16px;
+	font-weight: normal;
+}
+.firstLeft .news .newList h4 a {
+	color: #333;
+}
+.firstLeft .news .newList p {
+	line-height: 18px;
+	font-size: 14px;
+}
+.firstLeft .news .newList p a {
+	color: #999;
+}
+.firstLeft .news .newList h4 a:hover {
+	color: #ff5000;
+}
+.firstLeft .news .newList .more {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #999;
+}
+.firstLeft .news .newList .more:hover {
+	color: #ff5000;
+}
+
+/*右边的内容*/
+.firstRight {
+	width: 290px;
+	height: 621px;
+	background: grey;
+}
