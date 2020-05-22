@@ -25,7 +25,12 @@ input {
 button {
 	outline: none;
 }
-
+table {
+	border-collapse: collapse; /*边框模式，合并相隔边框为一个*/
+}
+th,td {
+	padding: 0;	
+}
 body {
 	font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif; //字体、行高的设置
 	color: #3c3c3c;
@@ -53,6 +58,12 @@ body {
 }
 .c5 {
 	color: #f50;
+}
+.c6 {
+	color: #8d7afb;
+}
+.c7 {
+	color: #a8c001;
 }
 .mt10 {
 	margin-top: 10px;
